@@ -1,0 +1,72 @@
+{
+  "extends": [
+    "react-app",
+    "react-app/jest",
+    "standard",
+    "plugin:@tanstack/eslint-plugin-query/recommended",
+    "plugin:jsx-a11y/recommended",
+    "prettier",
+    "plugin:storybook/recommended"
+  ],
+  "plugins": [
+    "jsx-a11y",
+    "unused-imports",
+    "eslint-plugin-import-helpers"
+  ],
+  "rules": {
+    "no-console": "error",
+    "no-void": 0,
+    "camelcase": 0,
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "always-multiline"
+      }
+    ],
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          "/^react/",
+          "/^@[^/].*/",
+          "/^@\\/.*/",
+          "module",
+          [
+            "parent",
+            "sibling",
+            "index"
+          ]
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "ignoreCase": true
+        }
+      }
+    ],
+    "no-undef": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-pascal-case": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "off",
+      {
+        "ignoreRestSiblings": true
+      }
+    ]
+  }
+}

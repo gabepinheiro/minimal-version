@@ -1,0 +1,288 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --white: #ffffff;
+    --black: #000000;
+
+    --background: #ffffff;
+    --foreground: #3a3a3b;
+
+    --card: #ffffff;
+    --card-foreground: #09090b;
+
+    --popover: #ffffff;
+    --popover-foreground: #09090b;
+
+    --primary-light-1: #e9e5f0;
+    --primary-light-1_5: #e5daf6;
+    --primary-light-2: #bdb5d5;
+
+    --primary: #59438a;
+    --primary-foreground: #fafafa;
+
+    --primary-dark-1: #372959;
+    --primary-dark-2: #120e1e;
+
+    --secondary-light-1: #e9f1f9;
+    --secondary-light-2: #ebf1f7;
+    --secondary-light-3: #c2d5e7;
+
+    --secondary: #3574b0;
+    --secondary-foreground: #ffffff;
+    --secondary-dark-1: #20466a;
+    --secondary-dark-2: #102335;
+
+    --tertiary-light-1: #fef9ea;
+    --tertiary-light-2: #fdeec1;
+
+    --tertiary: #f8c630;
+    --tertiary-foreground: #1c1917;
+
+    --tertiary-dark-1: #f8c630;
+    --tertiary-dark-2: #32280a;
+
+    --muted: #f4f4f5;
+    --muted-foreground: #71717a;
+
+    --accent: var(--primary-light-1);
+    --accent-foreground: #18181b;
+
+    --destructive: #ef4444;
+    --destructive-foreground: #fafafa;
+
+    --success-light-1: #a3f1d5;
+    --success-light-2: #4ab790;
+
+    --success: #038858;
+
+    --success-dark-1: #026d46;
+    --success-dark-2: #025235;
+
+    --warning-light-1: #f9d4ba;
+    --warning-light-2: #f2aa76;
+
+    --warning: #ea711a;
+
+    --warning-dark-1: #bb5a15;
+    --warning-dark-2: #8c4410;
+
+    --error-light-1: #fad3d3;
+    --error-light-2: #ef7c7c;
+
+    --error: #e42525;
+
+    --error-dark-1: #b61e1e;
+    --error-dark-2: #891616;
+
+    --purple-100: #e9e5f0;
+    --purple-200: #e5daf6;
+    --purple-300: #bdb5d5;
+    --purple-400: #59438a;
+    --purple-500: #372959;
+
+    --blue-100: #e9f1f9;
+    --blue-200: #ebf1f7;
+    --blue-300: #c2d5e7;
+    --blue-400: #3574b0;
+    --blue-500: #20466a;
+    --blue-600: #102335;
+
+    --green-100: #a3f1d5;
+    --green-200: #4ab790;
+    --green-300: #038858;
+    --green-400: #038858;
+    --green-500: #025235;
+
+    --yellow-100: #fef9ea;
+    --yellow-200: #fdeec1;
+    --yellow-300: #f8c630;
+    --yellow-400: #705400;
+    --yellow-500: #705400;
+
+    --red-100: #fad3d3;
+    --red-200: #ef7c7c;
+    --red-300: #e42525;
+    --red-400: #b61e1e;
+    --red-500: #891616;
+
+    --orange-100: #f9d4ba;
+    --orange-200: #f2aa76;
+    --orange-300: #ea711a;
+    --orange-400: #bb5a15;
+    --orange-500: #8c4410;
+
+    --neutral-50: #f4f4f4;
+    --neutral-100: #e5e5e5;
+    --neutral-200: #c7c7c8;
+    --neutral-300: #9b9b9c;
+    --neutral-400: #7d7d7e;
+    --neutral-500: #5f5f61;
+    --neutral-600: #4c4c4e;
+    --neutral-700: #39393a;
+    --neutral-800: #39393a;
+    --neutral-900: #131313;
+
+    --border: var(--primary-light-1);
+    --input: var(--primary-light-1);
+    --ring: #6d50af;
+    --separator: var(--neutral-300);
+
+    --radius: 0.25rem;
+
+    /* Shadows */
+    --box-shadow-level-1: 0px 2px 4px 0px #00000066;
+    --box-shadow-level-2: 0px 4px 12px 0px #00000033;
+    --box-shadow-level-3: 0px 4px 30px 0px #9b9b9c4d;
+    --box-shadow-level-4: 0px 8px 40px 0px #9b9b9c66;
+    --box-shadow-level-5: 0px 16px 24px -2px #9b9b9c99;
+    --box-shadow-level-6: 0px 16px 16px 0px #9b9b9c99;
+    --box-shadow-purple: 1px 2px 8px 0px #3729594d;
+    --box-shadow-purple-2: 0px 4px 8px 0px #37295966;
+    --box-shadow-blue: 0px 2px 4px 0px #20466a66;
+    --box-shadow-yellow: 0px 2px 4px 0px #f8c63066;
+
+    --progress-green: var(--success-light-2);
+    --progress-purple: var(--primary-light-2);
+    --progress-orange: var(--warning-light-2);
+    --progress-red: var(--error-light-2);
+    --progress-blue: #569ee3;
+    --progress-destructive: var(--destructive);
+
+    /* FullCalendar */
+    --fc-border-color: var(--neutral-100);
+    --fc-today-bg-color: var(--secondary-light-1);
+    --fc-highlight-color: none;
+    --fc-button-bg-color: var(--primary);
+    --fc-button-hover-bg-color: var(--primary-dark-1);
+    --fc-button-hover-border-color: var(--primary-dark-2);
+    --fc-button-active-bg-color: var(--primary-dark-1);
+    --fc-button-active-border-color: var(--primary-dark-2);
+    --fc-event-bg-color: var(--primary-light-2);
+    --fc-event-border-color: none;
+  }
+
+  .dark {
+    --background: #130f1f;
+    --foreground: #fafafa;
+
+    --card: #130f1f;
+    --card-foreground: #fafafa;
+
+    --popover: #130f1f;
+    --popover-foreground: #fafafa;
+
+    --primary: #59428a;
+    --primary-foreground: #fafafa;
+
+    --secondary: #3575b1;
+    --secondary-foreground: #ffffff;
+
+    --tertiary: #f8c630;
+    --tertiary-foreground: #1c1917;
+
+    --muted: #27272a;
+    --muted-foreground: #a1a1aa;
+
+    --accent: #1a132a;
+    --accent-foreground: #fafafa;
+
+    --destructive: #7f1d1d;
+    --destructive-foreground: #fafafa;
+
+    --border: #211834;
+    --input: #130f1f;
+    --ring: #6d50af;
+    --separator: #211834;
+
+    /* Shadows */
+    --box-shadow-level-1: 1px 3px 8px 0px #83838340;
+    --box-shadow-level-2: 2px 4px 12px 0px #cdcdcd4d;
+    --box-shadow-purple: 1px 2px 8px 0px #9c8ac940;
+
+    --progress-green: var(--success-dark-2);
+    --progress-purple: var(--primary-dark-1);
+    --progress-orange: var(--warning-light-2);
+    --progress-red: var(--error-light-2);
+    --progress-blue: var(--secondary-dark-1);
+    --progress-destructive: var(--destructive);
+
+    /* FullCalendar */
+    --fc-border-color: var(--border);
+    --fc-today-bg-color: #211834;
+    --fc-event-bg-color: var(--primary-dark-1);
+    --fc-event-border-color: none;
+    --fc-page-bg-color: #211834;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  /* FullCalendar */
+  .fc-event.fc-v-event {
+    @apply bg-none border-none;
+  }
+
+  .fc-event-main {
+    @apply min-h-0 h-full flex items-center rounded-md hover:border hover:border-primary bg-primary-light-2 !important;
+  }
+}
+
+/* FullCalendar */
+.fc-timegrid-event {
+  @apply block h-max !important;
+}
+
+.fc-daygrid-day-events {
+  @apply absolute top-1/2 -translate-y-1/2 !important;
+}
+.fc-event.fc-daygrid-dot-event {
+  @apply hover:bg-[transparent] focus:bg-[transparent] !important;
+}
+
+.fc .fc-daygrid-day-frame,
+.fc .fc-daygrid-day-bg .fc-highlight {
+  @apply cursor-pointer border border-[transparent] hover:border-primary transition-colors duration-300 !important;
+}
+
+/* NProgress */
+#nprogress .bar {
+  background: var(--primary) !important;
+  border: 2px solid var(--primary) !important;
+}
+
+#nprogress .peg {
+  box-shadow:
+    0 0 10px var(--primary),
+    0 0 5px var(--primary) !important;
+}
+
+#nprogress .spinner-icon {
+  border-top-color: var(--primary) !important;
+  border-left-color: var(--primary) !important;
+}
+
+/* React Paginate */
+.rp-page-item {
+  @apply h-10 px-4 py-2 text-primary dark:text-[#A08DD6] border border-primary dark:border-[#A08DD6]
+    bg-[transparent] hover:bg-accent hover:text-primary dark:hover:text-primary-light-2
+    inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xs text-base
+    font-medium transition-colors focus-visible:outline-none focus-visible:ring-1
+    focus-visible:ring-ring disabled:opacity-50;
+}
+
+.rp-active-page-item {
+  @apply bg-primary text-primary-foreground;
+}
